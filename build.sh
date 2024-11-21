@@ -12,7 +12,7 @@ FLOORP_URL="$(wget -q https://api.github.com/repos/floorp-Projects/Floorp/releas
 VERSION="$(echo $FLOORP_URL | awk -F"/" '{print $(NF-1)}')"
 
 wget --retry-connrefused --tries=30 "$FLOORP_URL"
-wget --retry-connrefused --tries=30 "$APPIMAGETOO" -O ./appimagetool
+wget --retry-connrefused --tries=30 "$APPIMAGETOOL" -O ./appimagetool
 tar -xvf *.tar.* && rm -f *.tar.*
 mv floorp/* "$APPDIR"/
 chmod +x ./AppDir/AppRun

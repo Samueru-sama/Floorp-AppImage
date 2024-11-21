@@ -15,7 +15,7 @@ wget --retry-connrefused --tries=30 "$FLOORP_URL"
 wget --retry-connrefused --tries=30 "$APPIMAGETOOL" -O ./appimagetool
 tar -xvf *.tar.* && rm -f *.tar.*
 mv floorp/* "$APPDIR"/
-chmod +x ./AppDir/AppRun
+chmod +x ./AppDir/AppRun ./appimagetool
 echo "AppDir: $APPDIR"
 ls -al
 ls -al "$APPDIR"
